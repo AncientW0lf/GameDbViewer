@@ -5,6 +5,8 @@ namespace GameDbViewer
 {
     public class Program
     {
+        public GameDbLoader Loader { get; } = new GameDbLoader();
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
