@@ -5,10 +5,12 @@ namespace GameDbViewer
 {
     public class Program
     {
-        public GameDbLoader Loader { get; } = new GameDbLoader();
+        public static GameDb GameDb { get; private set; }
 
         public static void Main(string[] args)
         {
+            GameDb = new GameDbLoader().Load();
+
             CreateHostBuilder(args).Build().Run();
         }
 
