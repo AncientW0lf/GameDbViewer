@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<div>
+<div class="main-content">
     @for (int i = 200; i < 300; i++)
     {
         <div class="row">
@@ -12,4 +12,8 @@
             <p class="col-sm">@Program.GameDb.Games[i].Name</p>
         </div>
     }
+</div>
+
+<div class="bottom-controls">
+    <p>Test</p>
 </div>
