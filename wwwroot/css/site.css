@@ -14,3 +14,10 @@ main {
     max-height: 96vh;
     overflow-y: scroll;
 }
+
+.thumbnail {
+    width: 4em;
+    height: 4em;
+    object-fit: contain;
+    object-position: center;
+}
