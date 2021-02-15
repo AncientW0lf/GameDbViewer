@@ -12,10 +12,15 @@ body {
     border-color: white;
     border-width: 2px;
     margin: 2vh 2vw;
-    padding: 0.5rem;
+    padding: 0 1rem;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 84vh;
+    /* height: 89vh; */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 2.5rem;
 }
 
 .bottom-controls {
@@ -25,9 +30,17 @@ body {
     border-color: white;
     border-width: 2px;
     margin: 2vh 2vw;
-    padding: 0.5rem;
+    padding: 0.2rem;
     overflow: hidden;
-    height: 10vh;
+    /* height: 5vh;
+    min-height: 5vh; */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .thumbnail {
