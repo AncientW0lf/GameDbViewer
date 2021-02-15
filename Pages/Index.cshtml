@@ -2,28 +2,15 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Index";
-
-    int varPg = Model.Pg;
 }
 
 <div class="main-content">
-    @for (int i = varPg; i < varPg + 50; i++)
+    @for (int i = 200; i < 300; i++)
     {
         <div class="row">
-            @if (i >= Program.GameDb.Games.Length)
-            {
-                <p class="col-sm">There is no more...</p>
-            }
-            else
-            {
-                <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")'>
-                <p class="col-sm">@Program.GameDb.Games[i].Name</p>
-            }
+            <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")'>
+            <p class="col-sm">@Program.GameDb.Games[i].Name</p>
         </div>
-        @if (i >= Program.GameDb.Games.Length)
-        {
-            break;
-        }
     }
 </div>
 
