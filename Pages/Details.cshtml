@@ -1,0 +1,35 @@
+﻿@page
+@model DetailsModel
+@{
+    ViewData["Title"] = $"Details - {Model.Game?.Name ?? "No game found"}";
+
+    Date gameDateObj = Model.Game.Date;
+    string gameDate = $"{gameDateObj?.Year}.{gameDateObj?.Month}.{gameDateObj?.Day}";
+    bool canParseGameDate = DateTime.TryParseExact(
+            gameDate,
+            "yyyy.MM.dd",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.AssumeUniversal,
+            out DateTime gameDateParsed);
+}
+
+<div class="main-content">
+    <div class="row">
+        <div class="col-sm">
+            <img class="normal-img" src='@($"/db/wii/covers/{Model.Game?.Id}.png")'>
+        </div>
+        <div class="col-sm">
+            <div class="info-box">
+                <p>Name: @Model.Game.Name</p>
+                <p>Type: @Model.Game.Type</p>
+                <p>Genre: @Model.Game.Genre</p>
+                <p>Languages: @Model.Game.Languages</p>
+                <p>Publisher: @Model.Game.Publisher</p>
+                @if (canParseGameDate)
+                {
+                    <p>Date: @(gameDate)</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
