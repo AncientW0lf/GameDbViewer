@@ -1,0 +1,13 @@
+.game-link {
+    color: black;
+    background-color: #fff5;
+    text-align: left;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.game-link:hover, .game-link:focus {
+    color: #333;
+    background-color: #fffc;
+    text-decoration: underline;
+}

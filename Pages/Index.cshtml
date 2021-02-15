@@ -4,10 +4,15 @@
     ViewData["Title"] = "Index";
 
     int varPg = Model.Pg;
+    const int pageMax = 50;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/index.css" />
 }
 
 <div class="main-content">
-    @for (int i = varPg; i < varPg + 50; i++)
+    @for (int i = varPg; i < varPg + pageMax; i++)
     {
         <div class="row">
             @if (i >= Program.GameDb.Games.Length)
@@ -17,7 +22,7 @@
             else
             {
                 <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")'>
-                <p class="col-sm">@Program.GameDb.Games[i].Name</p>
+                <a class="col-sm game-link" href="test">@Program.GameDb.Games[i].Name</a>
             }
         </div>
         @if (i >= Program.GameDb.Games.Length)
@@ -28,5 +33,5 @@
 </div>
 
 <div class="bottom-controls">
-    <p>Test</p>
+    <p>Viewing items @varPg - @(varPg + pageMax)</p>
 </div>
