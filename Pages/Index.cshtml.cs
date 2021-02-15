@@ -10,6 +10,8 @@ namespace GameDbViewer.Pages
 {
     public class IndexModel : PageModel
     {
+        public int Pg { get; set; }
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -17,9 +19,9 @@ namespace GameDbViewer.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(int pg)
         {
-
+            Pg = pg;
         }
     }
 }
