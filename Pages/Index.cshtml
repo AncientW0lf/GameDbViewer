@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/css/index.css" />
 }
 
-<div class="main-content">
+<div class="main-content" style="padding-top: 0px; padding-bottom: 0px">
     @for (int i = varPg; i < varPg + pageMax; i++)
     {
         <div class="row">
@@ -22,7 +22,7 @@
             else
             {
                 <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")'>
-                <a class="col-sm game-link" href="test">@Program.GameDb.Games[i].Name</a>
+                <a class="col-sm game-link" href='@($"details?id={Program.GameDb.Games[i].Id}")'>@Program.GameDb.Games[i].Name</a>
             }
         </div>
         @if (i >= Program.GameDb.Games.Length)

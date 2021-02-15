@@ -12,9 +12,9 @@ body {
     border-color: white;
     border-width: 2px;
     margin: 2vh 2vw;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* height: 89vh; */
     position: absolute;
     left: 0px;
@@ -43,9 +43,22 @@ body {
     vertical-align: middle;
 }
 
+.info-box {
+    background-color: #ccca;
+    border: solid white 1px;
+    padding: 0.5em;
+}
+
 .thumbnail {
     width: 4em;
     height: 4em;
+    object-fit: contain;
+    object-position: center;
+}
+
+.normal-img {
+    width: inherit;
+    height: 20em;
     object-fit: contain;
     object-position: center;
 }
