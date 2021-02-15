@@ -11,3 +11,22 @@
     background-color: #fffc;
     text-decoration: underline;
 }
+
+.back-btn,
+.next-btn {
+    position: absolute;
+    top: 0px;
+}
+
+.back-btn:hover,
+.next-btn:hover {
+    text-decoration: none;
+}
+
+.back-btn {
+    left: 0px;
+}
+
+.next-btn {
+    right: 0px;
+}

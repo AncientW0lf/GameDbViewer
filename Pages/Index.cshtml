@@ -5,6 +5,12 @@
 
     int varPg = Model.Pg;
     const int pageMax = 50;
+
+    int varPgTo = varPg + pageMax;
+    int varPgPrev = varPg - pageMax;
+
+    if(varPgPrev < 0)
+        varPgPrev = 0;
 }
 
 @section Styles {
@@ -33,5 +39,8 @@
 </div>
 
 <div class="bottom-controls">
-    <p>Viewing items @varPg - @(varPg + pageMax)</p>
+    <p>Viewing items @varPg - @varPgTo</p>
+
+    <a class="back-btn btn-secondary btn-sm" href='@($"/?pg={varPgPrev}")'>&#60;</a>
+    <a class="next-btn btn-secondary btn-sm" href='@($"/?pg={varPgTo}")'>&#62;</a>
 </div>
