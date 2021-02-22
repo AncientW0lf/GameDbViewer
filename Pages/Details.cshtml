@@ -16,7 +16,8 @@
 <div class="main-content">
     <div class="row">
         <div class="col-sm">
-            <img class="normal-img" src='@($"/db/wii/covers/{Model.Game?.Id}.png")'>
+            <img class="normal-img" src='@($"/db/wii/covers/{Model.Game?.Id}.png")'
+                onerror="this.src='img/missing.jpg'">
         </div>
         <div class="col-sm">
             <div class="info-box">

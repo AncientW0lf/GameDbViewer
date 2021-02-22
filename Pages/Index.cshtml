@@ -27,7 +27,8 @@
             }
             else
             {
-                <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")'>
+                <img class="col-xs thumbnail" src='@($"/db/wii/covers/{Program.GameDb.Games[i].Id}.png")' 
+                    onerror="this.src='img/missing.jpg'">
                 <a class="col-sm game-link" href='@($"details?id={Program.GameDb.Games[i].Id}")'>@Program.GameDb.Games[i].Name</a>
             }
         </div>
