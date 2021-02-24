@@ -5,7 +5,7 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (web)",
+            "name": "Launch web app",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -23,6 +23,19 @@
             "launchBrowser": {
                 "enabled": true
             }
+        },
+        {
+            "name": "Test DbPreparation",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/GameDbViewer/bin/Debug/netcoreapp3.1/DbPreparation.dll",
+            "args": [
+                // "${workspaceFolder}/DbPreparation/testdb"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
         }
     ]
 }
