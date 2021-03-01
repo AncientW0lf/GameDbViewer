@@ -1,12 +1,15 @@
 ﻿using System;
+using CommandLine;
 
 namespace DbPreparation
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ParserResult<AppArgs> res = Parser.Default.ParseArguments<AppArgs>(args);
+            AppArgs resArgs;
+            res.WithParsed(r => resArgs = r);
         }
     }
 }

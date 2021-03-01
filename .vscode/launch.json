@@ -31,7 +31,9 @@
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/GameDbViewer/bin/Debug/netcoreapp3.1/DbPreparation.dll",
             "args": [
-                // "${workspaceFolder}/DbPreparation/testdb"
+                "-d ${workspaceFolder}/DbPreparation/testdb/switchtdb.zip",
+                "-c ${workspaceFolder}/DbPreparation/testdb/GameTDB-switch_coverM-DE-2021-02-17.zip",
+                "-v ${workspaceFolder}/GameDbViewer/bin/Debug/netcoreapp3.1"
             ],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
